@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\pages",
+    "\\src\\pages\\add-chart",
+    "\\src\\pages\\chart-detail",
+    "\\src\\pages\\chart-edit-note",
+    "\\src\\pages\\home",
+    "\\src\\pages\\slides"
+  ],
+  "SelectedNode": "\\src\\pages\\chart-detail\\chart-detail.scss",
+  "PreviewInSolutionExplorer": false
+}

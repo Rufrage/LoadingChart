@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Loading Chart
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-grid>
+
+    <ion-row id="container-row">
+      <ion-col col-3 col-md-2 *ngFor="let container of containers">
+        <ion-card (click)="changeStatus(container)" (press)="editNote(container)" [ngStyle]="{'background-color': container.status == 0? '#ecf0f1' : container.status == 1? '#2ecc71' : '#c0392b', 'border-bottom' : container.note.length == 0? 'none' : 'solid #f39c12 3px'}">
+          <p text-center [ngStyle]="{color: container.status == 2? '#ecf0f1' : '#000000'}">{{ container.cnumber }}</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <br>
+
+    <ion-row class="m-12">
+      <ion-col>
+        <h1>Signature</h1>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="m-12">
+      <ion-col>
+        <div  style="border: solid black 1px; background-color: #ffffff;">
+          <signature-pad [options]="signaturePadOptions"  id="signatureCanvas"></signature-pad>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="m-12">
+      <ion-col col-6>
+        <button ion-button full (click)="clearSignature()">Clear Signature</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button full (click)="clearSignature()">Finish</button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

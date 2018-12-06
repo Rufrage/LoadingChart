@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Neues Loading Chart</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form [formGroup]="chart">
+
+      <ion-item class="transparent-item">
+        <ion-label floating>Consignee name</ion-label>
+        <ion-input type="text" formControlName="cname"></ion-input>
+      </ion-item>
+
+     <ion-item class="transparent-item">
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+     </ion-item>
+
+      <ion-item class="transparent-item">
+        <ion-label floating>Date of delivery</ion-label>
+        <ion-datetime type="date" displayFormat="DD/MM/YYYY" formControlName="ddate" min="2018" max="2050-12-31"></ion-datetime>
+      </ion-item>
+ 
+      <ion-item class="transparent-item">
+        <ion-label floating>Container number</ion-label>
+        <ion-input type="number" formControlName="cnumber"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent-item">
+        <ion-label floating>Seal number</ion-label>
+        <ion-input type="number" formControlName="snumber"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent-item">
+        <ion-label floating>Number of Containers</ion-label>
+        <ion-input type="number" formControlName="camount"></ion-input>
+      </ion-item>
+
+
+ 
+    </form>
+ 
+  <button block ion-button color="secondary" type="submit" [disabled]="!chart.valid" (click)="saveChart()">Save</button>
+</ion-content>

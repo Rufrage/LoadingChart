@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button (click)="clickSkip()">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides pager="true">
+
+    <ion-slide>
+      <h1 color="white">Welcome to BaeServices LoadingCharts.</h1>
+      <br>
+      <h2>Swipe left to continue.</h2>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row>
+        <ion-col>
+          <img src="./assets/imgs/slide_portrait.png">
+        </ion-col>
+      </ion-row>
+      <h1>1. Click the button to add a new loading chart</h1>
+      <h1>2. Tap the new chart to manage the containers</h1>
+    </ion-slide>
+
+    <ion-slide>
+      <ion-row>
+        <ion-col>
+          <img src="./assets/imgs/slide_detail.png">
+        </ion-col>
+      </ion-row>
+      <h1>1. Tap a container : 1x = green, 2x = red, 3x = reset</h1>
+      <h1>2. Tap and hold to enter a note</h1>
+    </ion-slide>
+
+    </ion-slides>
+</ion-content>
